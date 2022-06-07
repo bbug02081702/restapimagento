@@ -1,0 +1,33 @@
+<?php
+    $viewmodel = $this->getIndex();
+?>
+<table class="data table" id="learn-data-table">
+    <caption class="table-caption">Student Data</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="col id">ID</th>
+            <th scope="col" class="col name">NAME</th>
+            <th scope="col" class="col dob">DOB</th>
+            <th scope="col" class="col address">ADDRESS</th>
+            <th scope="col" class="col slug">SLUG</th>
+            <th scope="col" class="col email">EMAIL</th>
+            <th scope="col" class="col createdat">CREATED_AT</th>
+            <th scope="col" class="col upadateat">UPDATED_AT</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($viewmodel as $key => $data): ?>
+            <tr>
+                <td data-th="Id" class="col id"><?php echo $data->getEntityId(); ?></td>
+                <td data-th="Name" class="col name"><?php echo $data->getName(); ?></td>
+                <td data-th="Dob" class="col dob"><?php echo $data->getDob(); ?></td>
+                <td data-th="Address" class="col address"><?php echo $data->getAddress(); ?></td>
+                <td data-th="Slug" class="col slug"><?php echo $data->getSlug(); ?></td>
+                <td data-th="Email" class="col address"><?php echo $data->getEmail(); ?></td>
+                <td data-th="Createdat" class="col createdat"><?php echo $data->getCreatedAt(); ?></td>
+                <td data-th="Updatedat" class="col updatedat"><?php echo $data->getUpdatedAt(); ?></td>
+               
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

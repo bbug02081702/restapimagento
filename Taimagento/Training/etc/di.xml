@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Taimagento\Training\Api\LearnRepositoryInterface" 
+    type="Taimagento\Training\Model\LearnRepository"/>
+    <preference for="Taimagento\Training\Api\Data\LearnInterface" 
+    type="Taimagento\Training\Model\Learn"/>
+    <preference for="Taimagento\Training\Api\Data\LearnSearchResultInterface" 
+    type="Taimagento\Training\Model\LearnSearchResult"/>
+       // configuration cli
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="commandLearnlist" xsi:type="object">Taimagento\Training\Console\Command\LearnListCommand</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
