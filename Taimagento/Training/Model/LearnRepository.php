@@ -1,20 +1,20 @@
 <?php
 //tham khao web vimagento
-namespace Tainmagento\Training\Model;
+namespace Taimagento\Training\Model;
 
-use Tainmagento\Training\Api\Data\LearnInterface;
-use Tainmagento\Training\Model\ResourceModel\Learn\Collection;
+use Taimagento\Training\Api\Data\LearnInterface;
+use Taimagento\Training\Model\ResourceModel\Learn\Collection;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\SortOrder;
 
 /**
  * Class CustomManagement
- * @package Tainmagento\Training\Model
+ * @package Taimagento\Training\Model
  */
-class LearnRepository implements \Tainmagento\Training\Api\LearnRepositoryInterface
+class LearnRepository implements \Taimagento\Training\Api\LearnRepositoryInterface
 {
     /**
-     * @var \Tainmagento\Training\Model\LearnFactory
+     * @var \Taimagento\Training\Model\LearnFactory
      */
     protected $LearnFactory;
 
@@ -29,22 +29,22 @@ class LearnRepository implements \Tainmagento\Training\Api\LearnRepositoryInterf
     protected $collectionFactory;
 
     /**
-     * @var \Tainmagento\Training\Api\Data\LearnSearchResultInterfaceFactory
+     * @var \Taimagento\Training\Api\Data\LearnSearchResultInterfaceFactory
      */
     protected $searchResultInterfaceFactory;
 
     /**
      * CustomRepository constructor.
-     * @param \Tainmagento\Training\Model\LearnFactory $LearnFactory
+     * @param \Taimagento\Training\Model\LearnFactory $LearnFactory
      * @param ResourceModel\Learn $LearnResource
      * @param ResourceModel\Learn\CollectionFactory $collectionFactory
-     * @param \Tainmagento\Training\Api\Data\LearnSearchResultInterfaceFactory $searchResultInterfaceFactory
+     * @param \Taimagento\Training\Api\Data\LearnSearchResultInterfaceFactory $searchResultInterfaceFactory
      */
     public function __construct(
-        \Tainmagento\Training\Model\LearnFactory $LearnFactory,
-        \Tainmagento\Training\Model\ResourceModel\Learn $LearnResource,
-        \Tainmagento\Training\Model\ResourceModel\Learn\CollectionFactory $collectionFactory,
-        \Tainmagento\Training\Api\Data\LearnSearchResultInterfaceFactory $searchResultInterfaceFactory
+        \Taimagento\Training\Model\LearnFactory $LearnFactory,
+        \Taimagento\Training\Model\ResourceModel\Learn $LearnResource,
+        \Taimagento\Training\Model\ResourceModel\Learn\CollectionFactory $collectionFactory,
+        \Taimagento\Training\Api\Data\LearnSearchResultInterfaceFactory $searchResultInterfaceFactory
     ) {
         $this->LearnFactory = $LearnFactory;
         $this->LearnResource = $LearnResource;
@@ -68,10 +68,10 @@ class LearnRepository implements \Tainmagento\Training\Api\LearnRepositoryInterf
     /**
      * {@inheritdoc}
      */
-    public function save(LearnInterface $vimagento)
+    public function save(LearnInterface $learn)
     {
-        $this->LearnResource->save($vimagento);
-        return $vimagento;
+        $this->LearnResource->save($learn);
+        return $learn;
     }
 
     /**
