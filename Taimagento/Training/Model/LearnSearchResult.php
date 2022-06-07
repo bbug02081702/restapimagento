@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Tainmagento\Training\Model;
+namespace Taimagento\Training\Model;
 
 use Magento\Framework\Api\SearchResults;
-use Tainmagento\Training\Api\Data\CustomSearchResultInterface;
+use Taimagento\Training\Api\Data\CustomSearchResultInterface;
 
 /**
  * Class CustomSearchResult
- * @package Tainmagento\Training\Model
+ * @package Taimagento\Training\Model
  */
 class CustomSearchResult extends SearchResults implements CustomSearchResultInterface
 {
